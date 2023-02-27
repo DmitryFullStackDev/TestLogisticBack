@@ -1,15 +1,14 @@
 {
-  "name": "",
+  "name": "first-node-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
-  "scripts": {
-    "startDev": "nodemon src/index.js",
-    "start": "node index.js"
-  },
-  "keywords": [],
+  "description": "my first nodejs express app",
+  "main": "index.js",
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "startDev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
