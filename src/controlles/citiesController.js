@@ -14,6 +14,10 @@ class CitiesController {
   async getListOfCities(req, res, next) {
     const { string } = req.query
 
+    if (!!string) {
+      return next(ApiError.badRequest({ message: 'string is not provided' }))
+    }
+
     if (string.toLocaleLowerCase() === 'fail') {
       return next(ApiError.badRequest({ message: 'fail is not allowed' }))
     }
