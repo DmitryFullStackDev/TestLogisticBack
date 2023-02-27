@@ -15,7 +15,7 @@ app.use(errorHandler)
 
 const start = async () => {
   try {
-    app.listen(8080, () => console.log('run ' + process.env.PORT))
+    app.listen(8080, () => console.log('run ' + 8080))
   } catch (e) {
     console.log(e)
   }
