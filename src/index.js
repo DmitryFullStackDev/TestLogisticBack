@@ -13,12 +13,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use('/', routes)
 app.use(errorHandler)
 
-const start = async () => {
-  try {
-    app.listen(process.env.PORT, () => console.log('run ' + 8080))
-  } catch (e) {
-    console.log(e)
-  }
-}
+app.get('/', (req, res) => {
+  res.status(200).send('Hello server is running').end()
+})
 
-start()
+// Start the server
+const PORT = process.env.PORT || 8080
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`)
+  console.log('Press Ctrl+C to quit.')
+})
