@@ -14,7 +14,7 @@ class CitiesController {
   async getListOfCities(req, res, next) {
     const { string } = req.query
 
-    if (!!string) {
+    if (!string) {
       return next(ApiError.badRequest({ message: 'string is not provided' }))
     }
 
